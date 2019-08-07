@@ -25,7 +25,7 @@ def echo():
             }
         }
     else:
-        if check_polindrom(request.json['request']['original_utterance']) == Trues:
+        if check_polindrom(request.json['request']['original_utterance']) == True:
             response = {
                 'version':request.json['version'],
                 'session':request.json['session'],
