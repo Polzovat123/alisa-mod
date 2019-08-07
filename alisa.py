@@ -7,7 +7,7 @@ def check_polindrom(words):
     a = words[::-1]
     if a == words:
         return True
-    esle:
+    esle :
         return False
 
 @app.route('/', methods=['POST'])
