@@ -19,6 +19,7 @@ def echo():
             'session':request.json['session'],
             'response':{
               'text':  'Спасаев в пути ... Назовите слово'
+               'tts':''
             }
         }
     else:
