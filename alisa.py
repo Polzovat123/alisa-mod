@@ -3,6 +3,19 @@ import os
 
 app = Flask(__name__)
 
+def check_polindrom(words):
+    lin = len(words)/2
+    linf = len(words)
+    if linf%2 == 1:
+        lin-=1
+    i=int(0)
+    while i < lin:
+        if word[i] != word[linf-1-i]:
+            return False
+        i = i +1
+    return True
+    
+
 @app.route('/', methods=['POST'])
 def echo():
     
@@ -15,7 +28,7 @@ def echo():
             }
         }
     else:
-        if request.json['request']['original_utterance'] == 'шалаш':
+        if check_polindrom(request.json['request']['original_utterance']) == Trues:
             response = {
                 'version':request.json['version'],
                 'session':request.json['session'],
