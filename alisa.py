@@ -4,17 +4,13 @@ import os
 app = Flask(__name__)
 
 def check_polindrom(words):
-    lin = len(words)/2
-    linf = len(words)
-    if linf%2 == 1:
-        lin-=1
-    i=int(0)
-    while i < lin:
-        if word[i] != word[linf-1-i]:
+    l = len(words)
+
+    for i in range(l//2):
+        if s[i] != s[-1-i]:
             return False
-        i = i +1
+        
     return True
-    
 
 @app.route('/', methods=['POST'])
 def echo():
