@@ -9,7 +9,7 @@ def echo():
     if request.json['request']['original_utterance'] == '':
         response = {
             'version':request.json['version'],
-            'session':request.json['sesion'],
+            'session':request.json['session'],
             'response':{
               'text':  'Спасаев в пути ... Назовите слово'
             }
@@ -18,7 +18,7 @@ def echo():
         if request.json['request']['original_utterance'] == 'шалаш':
             response = {
                 'version':request.json['version'],
-                'session':request.json['sesion'],
+                'session':request.json['session'],
                 'response':{
                   'text':  'True. Спасаев в пути ... Назовите слово'
                 }
@@ -26,7 +26,7 @@ def echo():
         else:
             response = {
                 'version':request.json['version'],
-                'session':request.json['sesion'],
+                'session':request.json['session'],
                 'response':{
                   'text':  'Fak. Спасаев в пути ... Назовите слово'
                 }
